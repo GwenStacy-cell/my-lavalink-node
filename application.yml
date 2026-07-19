@@ -1,0 +1,27 @@
+server:
+  port: 2333
+  address: 0.0.0.0
+lavalink:
+  plugins:
+    # This automatically downloads LavaSrc when the server boots!
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.1.1"
+      repository: "https://maven.lavalink.dev/releases"
+  server:
+    password: "Prince12"
+    sources:
+      youtube: true
+      soundcloud: true
+      http: true
+plugins:
+  lavasrc:
+    providers:
+      - "ytsearch:\"%ISRC%\"" # Forces perfect studio audio matching
+      - "ytsearch:%QUERY%"
+    sources:
+      spotify: true
+      applemusic: false
+      deezer: false
+    spotify:
+      clientId: "e124e96cc9004a08a9a74f9bafcecd76"
+      clientSecret: "8aa354d8e77c4fcfa64444264bdfd3c2"
+      countryCode: "US" 
